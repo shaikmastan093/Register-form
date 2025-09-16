@@ -1,0 +1,168 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #ecf0f3;
+}
+
+.container {
+  width: 850px;
+  max-width: 100%;
+  height: 500px;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+  background: #ecf0f3;
+  box-shadow: 13px 13px 20px #cbced1,
+              -13px -13px 20px #fff;
+}
+
+/* Left Form */
+.form-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.social-container {
+  margin: 20px 0;
+}
+
+.social-container a {
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  border-radius: 50%;
+  background: #ecf0f3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 18px;
+  box-shadow: 3px 3px 6px #cbced1,
+              -3px -3px 6px #fff;
+  transition: 0.3s;
+}
+
+/* Social icon hover colors */
+.social-container a:hover {
+  transform: scale(1.1);
+}
+
+.social-container a:nth-child(1):hover {
+  color: #1877f2;   /* Facebook Blue */
+}
+
+.social-container a:nth-child(2):hover {
+  color: #1da1f2;   /* Twitter Blue */
+}
+
+.social-container a:nth-child(3):hover {
+  color: #0077b5;   /* LinkedIn Blue */
+}
+
+.social-container a:hover {
+  transform: scale(1.1);
+}
+
+.small-text {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px 15px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  background: #ecf0f3;
+  box-shadow: inset 3px 3px 6px #cbced1,
+              inset -3px -3px 6px #fff;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  padding: 12px 45px;
+  background: #ecf0f3;
+  color: #333;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 3px 3px 6px #cbced1,
+              -3px -3px 6px #fff;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  box-shadow: inset 3px 3px 6px #cbced1,
+              inset -3px -3px 6px #fff;
+}
+
+.btn-light {
+  background: #ff4b2b;
+  color: #fff;
+  box-shadow: 3px 3px 6px #d94325,
+              -3px -3px 6px #ff5d3d;
+}
+
+.btn-light:hover {
+  box-shadow: inset 3px 3px 6px #d94325,
+              inset -3px -3px 6px #ff5d3d;
+}
+
+/* Right Overlay */
+.overlay {
+  flex: 1;
+  background: #ff4b2b;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  text-align: center;
+}
+
+.overlay h2 {
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+
+.overlay p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+  .overlay {
+    border-radius: 0 0 20px 20px;
+  }
+}
