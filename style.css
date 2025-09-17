@@ -128,27 +128,40 @@ h2 { margin-bottom: 20px; font-size:24px; color:#ff5c00; text-align:center; }
   z-index:1;
 }
 
-/* Mobile & Tablet Responsive */
+/* Tablet & Mobile Responsive */
 @media (max-width:768px) {
+  body {
+    align-items: flex-start; 
+    padding-top: 40px;
+  }
   .container { max-width: 350px; height:auto; padding:20px; }
+  .form-container {
+    position: absolute; /* keep absolute for sliding */
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(100%) scale(0.95); /* default hidden */
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  .login-container { transform: translateX(0) scale(1); opacity:1; z-index:2; }
+  .signup-container { transform: translateX(100%) scale(0.95); opacity:0; z-index:1; }
+
+  /* Show/Hide Classes */
+  .show-signup { transform: translateX(0) scale(1); opacity:1; z-index:2; }
+  .hide-login { transform: translateX(-100%) scale(0.95); opacity:0; z-index:1; }
+  .show-login { transform: translateX(0) scale(1); opacity:1; z-index:2; }
+  .hide-signup { transform: translateX(100%) scale(0.95); opacity:0; z-index:1; }
+
   input, .btn { font-size:14px; padding:10px 12px; }
   h2 { font-size:22px; }
   .social-container a { height:40px; width:40px; font-size:18px; }
 }
 
 @media (max-width:480px) {
-  .container { max-width: 300px; height:auto; padding:15px; }
+  body { padding-top: 30px; }
+  .container { max-width: 300px; padding:15px; }
   input, .btn { font-size:13px; padding:8px 10px; }
   h2 { font-size:20px; }
   .social-container a { height:35px; width:35px; font-size:16px; }
-}
-
-/* 3D perspective scaling for mobile */
-@media (max-width:480px) {
-  .form-container {
-    transform: rotateY(0deg) scale(0.95);
-  }
-  .show-signup, .show-login {
-    transform: rotateY(0deg) scale(1);
-  }
 }
