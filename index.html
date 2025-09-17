@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3D Login & Registration</title>
+  <title>3D Futuristic Login & SignUp</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <!-- Left: Sign In -->
-    <div class="form-container">
+    
+    <!-- Login Form -->
+    <div class="form-container login-container show-login">
       <h2>Sign In</h2>
       <div class="social-container">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -21,14 +22,25 @@
       <input type="email" placeholder="Email" />
       <input type="password" placeholder="Password" />
       <button class="btn">Sign In</button>
+      <p class="switch-text">Don't have an account? <span id="toSignUp">Sign Up</span></p>
     </div>
 
-    <!-- Right: Overlay -->
-    <div class="overlay">
-      <h2>Hello, Welcome!</h2>
-      <p>Don't have an account?</p>
-      <button class="btn btn-light" id="signUp">Sign Up</button>
+    <!-- Sign Up Form -->
+    <div class="form-container signup-container">
+      <h2>Sign Up</h2>
+      <div class="social-container">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <p class="small-text">or create your account</p>
+      <input type="text" placeholder="Username" />
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button class="btn btn-light">Sign Up</button>
+      <p class="switch-text">Already have an account? <span id="toLogin">Login</span></p>
     </div>
+
   </div>
 
   <script src="script.js"></script>
