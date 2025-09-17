@@ -1,37 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3D Login & Registration</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Futuristic 3D Login & Registration</title>
 
-  <!-- ✅ Correct Font Awesome CDN -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <!-- Left: Sign In -->
-    <div class="form-container">
-      <h2>Sign In</h2>
-      <div class="social-container">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-      <p class="small-text">or use your account</p>
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
-      <button class="btn">Sign In</button>
-    </div>
 
-    <!-- Right: Overlay -->
-    <div class="overlay">
-      <h2>Hello, Friend</h2>
-      <p>Enter your personal details and start journey with us</p>
-      <button class="btn btn-light" id="signUp">Sign Up</button>
+  <main class="page">
+    <div class="card" id="container">
+      <!-- Sign Up -->
+      <div class="form-container sign-up-container">
+        <form id="register-form" class="form" autocomplete="off">
+          <h1>Create Account</h1>
+          <div class="social-container">
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Google"><i class="fab fa-google"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+          <span class="sub">or use your email</span>
+          <input name="name" type="text" placeholder="Full name" required class="float-item"/>
+          <input name="email" type="email" placeholder="Email" required class="float-item"/>
+          <input name="password" type="password" placeholder="Password" required class="float-item"/>
+          <button type="submit" class="btn primary float-item">Sign Up</button>
+        </form>
+      </div>
+
+      <!-- Sign In -->
+      <div class="form-container sign-in-container">
+        <form id="login-form" class="form" autocomplete="off">
+          <h1>Sign in</h1>
+          <div class="social-container">
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" title="Google"><i class="fab fa-google"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+          <span class="sub">or use your account</span>
+          <input name="email" type="email" placeholder="Email" required class="float-item"/>
+          <input name="password" type="password" placeholder="Password" required class="float-item"/>
+          <a class="link" href="#">Forgot your password?</a>
+          <button type="submit" class="btn primary float-item">Sign In</button>
+        </form>
+      </div>
+
+      <!-- Overlay -->
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left float-item">
+            <h1>Welcome Back!</h1>
+            <p>Sign in with your personal info to continue.</p>
+            <button class="btn ghost" id="signIn">Sign In</button>
+          </div>
+          <div class="overlay-panel overlay-right float-item">
+            <h1>Hello, Friend!</h1>
+            <p>Enter details and start your journey.</p>
+            <button class="btn ghost" id="signUp">Sign Up</button>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+    <p class="hint">Tip: Tilt your device or swipe for 3D effect.</p>
+  </main>
 
   <script src="script.js"></script>
 </body>
